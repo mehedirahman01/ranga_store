@@ -8,7 +8,6 @@ loadProducts();
 
 // show all product in UI 
 const showProducts = (products) => {
-  //console.log(products)
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     const image = product.image;
@@ -29,7 +28,7 @@ const showProducts = (products) => {
   }
 };
 
-
+// add to cart function
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -39,6 +38,7 @@ const addToCart = (id, price) => {
   document.getElementById("total-Products").innerText = count;
 };
 
+// convert text value to float
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
@@ -104,7 +104,7 @@ const showDetails = product => {
   productDetailsDiv.innerHTML = `
   <p>Product ID: ${product.id}</p>
   <p>Product Title: ${product.title}</p>
-  <p>Product Price: ${product.price}</p>
+  <p>Product Price: ${product.price} dollars</p>
   <p>Product Category: ${product.category}</p>
   `
   modal.appendChild(productDetailsDiv)

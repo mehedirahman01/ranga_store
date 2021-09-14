@@ -16,7 +16,6 @@ body {
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
@@ -27,6 +26,9 @@ body {
   background-color: #EFEFEF;
   padding: 10px;
   transition: 0.6s;
+  height: 550px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   
 }
 .single-product:hover {
